@@ -4,15 +4,17 @@ require 'rubygems'
 require 'rdiscount'
 
 infile_path = ARGV.shift
+infile = nil
 
-if !infile_path
-  warn("usage: mdstyle file")
-  exit 1
+if infile_path
+  infile = File.read(infile_path)
+else
+  infile = $stdin.read
 end
 
-infile = File.read(infile_path).split(/\n-{3,}\n/)
-style = infile.first
-content = infile.last
+split = infile.split(/\n-{3,}\n/)
+style = split.first
+content = split.last
 content_rendered = RDiscount.new(content, :smart).to_html
 
 $stdout.puts <<-EOF
