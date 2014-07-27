@@ -12,7 +12,7 @@ else
   infile = $stdin.read
 end
 
-split = infile.split(/\n-{3,}\n/)
+split = infile.split(/\n\!{3,}\n/)
 style = split.first
 content = split.last
 content_rendered = RDiscount.new(content, :smart).to_html
