@@ -7,7 +7,7 @@ it.
 
 ## License (2-clause BSD-style)
 
-Copyright (c) 2014 Christian Koch <cfkoch@sdf.lonestar.org>
+Copyright (c) 2014 Charlotte Koch <cfkoch@edgebsd.org>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
